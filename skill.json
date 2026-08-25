@@ -1,0 +1,41 @@
+{
+  "name": "genpark-realtime-screen-stream-video-latent-diffuser-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Sub-50ms screen stream latent video diffuser rendering continuous generative visuals from live display feeds.",
+  "author": "genpark",
+  "category": "realtime-diffusion",
+  "tags": [
+    "realtime-stream",
+    "krea-video",
+    "screen-to-video",
+    "low-latency-diffusion",
+    "webrtc-stream"
+  ],
+  "inputs": {
+    "capture_source": {
+      "type": "string"
+    },
+    "target_fps": {
+      "type": "integer"
+    },
+    "style_prompt": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "stream_session_id": {
+      "type": "string"
+    },
+    "latent_diffusion_latency_ms": {
+      "type": "integer"
+    },
+    "webrtc_stream_url": {
+      "type": "string"
+    },
+    "zero_drop_frame_rate_pct": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
